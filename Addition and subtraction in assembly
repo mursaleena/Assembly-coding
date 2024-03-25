@@ -1,0 +1,21 @@
+TITLE Add and Subtract (AddSub2.asm)
+
+; This program adds and subtracts 32-bit unsigned integers and stores the sum in a variable.
+
+INCLUDE Irvine32.inc
+.data
+var1 DWORD 6h ; assigning 6 to var1 
+var2 DWORD 2h ; assigning 2 to var2
+var3 DWORD 5h ; assigning 5 to var3
+    	
+.code
+main PROC
+
+mov eax,var1
+sub eax,var2
+add eax,var3
+call dumpregs
+
+exit
+main ENDP
+END main
